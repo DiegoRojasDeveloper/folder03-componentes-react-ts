@@ -1,0 +1,9 @@
+{
+  "name": "cate3-buttons-c01-logout-button",
+  "version": "1.2.0",
+  "main": "index.js",
+  "license": "}",
+  "description": "componente generalmente cuadrado, que se usa para el logout",
+  "repository": "https://github.com/DiegoRojasDeveloper/c05-logout-button.git",
+  "author": "diego rojas"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "c03-loading-screen",
+  "version": "1.0.0",
+  "description": "componente de loadin",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoRojasDeveloper/c03-loading-screen.git"
+  },
+  "author": "diego rojas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoRojasDeveloper/c03-loading-screen/issues"
+  },
+  "homepage": "https://github.com/DiegoRojasDeveloper/c03-loading-screen#readme"
+}

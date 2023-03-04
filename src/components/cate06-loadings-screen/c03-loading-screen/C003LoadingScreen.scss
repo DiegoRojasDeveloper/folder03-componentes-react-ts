@@ -1,0 +1,48 @@
+@use '/src/html/html02-css/CSS03Fonts.scss';
+@use 'zzz-folder02-configuraciones-css/CSS02Standar.scss' as scss;
+@use '/src/html/html02-css/cssClassFunctions.scss' as fn;
+.mc-C003--loadin-screen {
+	align-items: center;
+	background-color: rgba(0, 0, 0, .6);
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	left: scss.$left-0;
+	position: fixed;
+	left: scss.$top-0;
+	width: 100%;
+	z-index: 2;
+}
+
+.C01-C003 {
+	direction: row;
+	width: fn.PxToRem(30);
+	height: fn.PxToRem(30);
+	border-radius: 50%;
+	margin: fn.PxToRem(15);
+	background-image: LINEHar-gradient(145deg, cr.$violet01 0%, rgba(0, 0, 0, 0) 100%);
+	animation: bounce 0.4s linear infinite;
+}
+
+.subc-02-C003 {
+	@extend .C01-C003;
+	background-image: LINEHar-gradient(145deg, cr.$dark-blue-main 0%, rgba(0, 0, 0, 0) 100%);
+	animation: bounce 0.4s linear infinite;
+}
+
+@keyframes bounce {
+
+	0%,
+	50%,
+	100% {
+		transform: scale(1);
+	}
+
+	25% {
+		transform: scale(0.6);
+	}
+
+	75% {
+		transform: scale(1.1);
+	}
+}

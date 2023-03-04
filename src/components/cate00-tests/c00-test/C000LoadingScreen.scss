@@ -1,0 +1,75 @@
+@use '/src/html/html02-css/cssClassFunctions.scss' as fn;@use 'src/html/html02-css/CSS02Colors.scss' as c;
+@use '/src/html/html02-css/style02-Background.scss' as bg;
+
+.loading-screen {
+    align-items: center;
+    background-color: bg.$bg1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: scss.$left-0;
+    position: fixed; 
+    left: scss.$top-0;
+    width: 100%;
+    z-index: 2;
+
+    .image {
+        animation: loader 3s ease-in infinite, spin 1s linear infinite;
+        border-radius: fn.PxToRem(5);
+        border: fn.PxToRem(40) solid transparent;
+        filter: saturate(3);
+        height: fn.PxToRem(0.1);
+        width: fn.PxToRem(0.1);
+
+        ::after {
+            background-color: scss.$gray-e;
+            border-radius: fn.PxToRem(20);
+            content:'';
+            display: block;
+            height: fn.PxToRem(6);
+            margin-left: fn.PxToRem(-3);
+            margin-top: fn.PxToRem(-3);
+            position: absolute;
+            width:fn.PxToRem(6);
+            z-index: 2;
+        }
+
+        ::before {
+            animation: loader 2s ease-in infinite reverse, spin 0.8s linear infinite reverse;
+            border-radius: fn.PxToRem(5);
+            border: fn.PxToRem(-40) solid transparent;
+            content:'';
+            display: block;
+            filter: saturate(0.3);
+            height:0.1;
+            margin-left: fn.PxToRem(-40);
+            margin-top: fn.PxToRem(-40);
+            position: absolute;
+            width:0.1;
+            z-index: -1;  
+        }  
+    }
+
+    label {
+        color: scss.$blue-1;
+        margin-top: fn.PxToRem(34);  
+    }
+}
+
+$c1: #114357;
+$c2: #826C75;
+$c3: #F29492;
+
+@keyframes loader {
+  0% {border-bottom-color:transparent;border-top-color:$c1}
+  25% {border-left-color:transparent;border-right-color:$c2}
+  50% {border-top-color:transparent;border-bottom-color:$c3}
+  75% {border-right-color:transparent;border-left-color:$c2}
+  100% {border-bottom-color:transparent;border-top-color:$c1}
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(-360deg)}
+}

@@ -1,0 +1,14 @@
+// Vitest Snapshot v1
+
+exports[`suit-C05-LogoutButtom > test01-C05 - El Snapshot debe coincidir 1`] = `
+<div>
+  <button
+    class="mc-C05--logout-button icon"
+  >
+    <img
+      src="https://www.assets.com/icon.png"
+    />
+    Ejemplo de título
+  </button>
+</div>
+`;

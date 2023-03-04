@@ -1,0 +1,74 @@
+@use 'zzz-folder02-configuraciones-css/CSS01Functions.scss' as fn;
+@use 'zzz-folder02-configuraciones-css/CSS02Standar.scss' as scss;
+
+.mc-002--input-file {
+    align-items: center;
+    background-color: white;
+    border-radius: csss.$border-radius-2;
+    box-shadow: 0rem fn.PxToRem(5) fn.PxToRem(5) rgba(0, 0, 0, 0.15);
+    color: scss.$color-17;   
+    display: block;
+    height: fn.PxToRem(40);
+    text-align: center;
+    width: 100;
+}
+
+  
+[type="file"] + label {
+    display: block;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1rem 50px;
+    position: relative;
+    transition: all 0.3s;
+    text-align: center;
+
+    &.C01-C002 {
+        background-color: white;
+        border-radius: 0;
+        overflow: hidden;
+        text-align: center;
+        
+        &::before {
+            content: url('/src/html/assets/icons/Upload\ .svg');
+            font-family: "Font Awesome 5 Pro";
+            height: 100%;
+            left: scss.$left-0;
+            line-height: 4.6;
+            position: absolute;
+            top: -180%;
+            transition: all 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+        
+        &:hover {
+            background-color: scss.$dark-blue-d;
+        
+            span {
+                display: inline-block;
+                transition: all 0.3s;
+                width: 100%;
+            }
+        
+            span {
+                transform: translateY(300%);
+            }
+        }    
+
+        &::before {
+            left: scss.$top-0;
+        }
+    }
+}
+
+
+    
+[type="file"] { 
+    text-align: center;
+    width: 0;
+
+    label {
+        display: block;
+    }
+}
